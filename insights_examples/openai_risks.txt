@@ -1,0 +1,37 @@
+
+==========================================================================================
+PROVIDER: openai | PROMPT: risks | MODEL: gpt-4o
+==========================================================================================
+
+--- PROMPT (for reference) ---
+Identify potential risk flags (concentration, imbalance, anomalies) based on the following summary.
+
+Summary:
+- Total transactions: 1,030
+- Total notional: $21,633,775.10
+- Unique tickers: 10
+- Unique traders: 16
+- Date range: 2024-01-15 19:02:00 to 2024-01-18 01:30:00
+- Top tickers by volume: MSFT=$8,896,850, AAPL=$4,797,094, GOOGL=$3,867,913, NVDA=$1,241,259, GS=$932,483
+- BUY/SELL counts: {'SELL': 523, 'BUY': 507}
+- Most active trader: T001 (tx=344, notional=$0)
+
+
+--- RESPONSE ---
+## Risks
+- **Concentration Risk**: There is a significant concentration in MSFT and AAPL, both in terms of volume and net positions. MSFT accounts for approximately 41% of the total volume, and AAPL has the largest negative net position.
+- **Buy/Sell Imbalance**: There is a slight imbalance in the number of SELL transactions (523) compared to BUY transactions (507), which could indicate a bearish sentiment or liquidation trend.
+- **Unusual Spikes in Daily Volume**: The volume on 2024-01-17 and 2024-01-16 is notably high, with each day accounting for over $6.9 million in notional volume. This could indicate unusual market activity or news impacting trading behavior.
+- **Outlier Behavior by Traders**: Trader T001 is an outlier with 344 transactions and a notional volume of $7,422,950.30, which is significantly higher than other traders. This could indicate excessive trading activity or potential market manipulation.
+
+## Supporting Evidence
+- **Concentration Risk**: MSFT's volume is $8,896,849.90, which is 41% of the total volume. AAPL has the largest negative net position with -1,520 shares.
+- **Buy/Sell Imbalance**: The SELL transactions exceed BUY transactions by 16, which is a small but notable imbalance.
+- **Unusual Spikes in Daily Volume**: The daily volumes on 2024-01-17 and 2024-01-16 are $6,971,558.10 and $6,956,748.25, respectively, compared to $5,844,861.05 on 2024-01-15.
+- **Outlier Behavior by Traders**: Trader T001's activity is significantly higher than the next most active trader, with 344 transactions and $7,422,950.30 in notional volume, compared to the next highest of 53 transactions and $1,157,877.80 by T012.
+
+## Mitigations / Next Checks
+- **Concentration Risk**: Monitor MSFT and AAPL for any news or events that could impact their prices. Consider diversifying the portfolio to reduce exposure to these tickers.
+- **Buy/Sell Imbalance**: Investigate the reasons behind the sell-off trend. Check for any market news or events that could have triggered this behavior.
+- **Unusual Spikes in Daily Volume**: Review market news, announcements, or events on 2024-01-17 and 2024-01-16 that could explain the high trading volumes. Verify if these volumes are consistent with historical patterns.
+- **Outlier Behavior by Traders**: Conduct a deeper analysis of Trader T001's transactions to ensure compliance with trading policies and to rule out any manipulative behavior. Consider setting thresholds for transaction counts and notional volumes to flag potential outliers in the future.

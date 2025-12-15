@@ -1,0 +1,52 @@
+
+==========================================================================================
+PROVIDER: anthropic | PROMPT: custom | MODEL: claude-sonnet-4-20250514
+==========================================================================================
+
+--- PROMPT (for reference) ---
+Answer the user's question using only the summary below. If information is missing, state what is needed.
+
+Question:
+What are the biggest concentration risks, and what should I review next?
+
+Summary:
+- Total transactions: 1,030
+- Total notional: $21,633,775.10
+- Unique tickers: 10
+- Unique traders: 16
+- Date range: 2024-01-15 19:02:00 to 2024-01-18 01:30:00
+- Top tickers by volume: MSFT=$8,896,850, AAPL=$4,797,094, GOOGL=$3,867,913, NVDA=$1,241,259, GS=$932,483
+- BUY/SELL counts: {'SELL': 523, 'BUY': 507}
+- Most active trader: T001 (tx=344, notional=$0)
+
+
+--- RESPONSE ---
+Based on the analytics summary, here are the biggest concentration risks and next review priorities:
+
+## **CONCENTRATION RISKS IDENTIFIED:**
+
+**Trader Concentration:**
+• **T001 represents 33% of all transactions** (344 of 1,030) and **34% of total volume** ($7.4M of $21.6M)
+• Single trader failure could significantly impact overall trading activity
+
+**Stock Concentration:**
+• **Top 3 stocks (MSFT, AAPL, GOOGL) represent 81% of total volume** ($17.6M of $21.6M)
+• **MSFT alone accounts for 41% of total volume** ($8.9M)
+
+**Large Net Short Positions:**
+• **AAPL: -1,520 shares** and **META: -1,070 shares** represent significant directional exposure
+• **8 out of 10 top positions are net short**, creating concentrated bearish exposure
+
+## **WHAT TO REVIEW NEXT:**
+
+**Missing Critical Information:**
+• **Position limits and risk thresholds** - cannot assess if concentrations exceed acceptable levels
+• **Trader T001's strategy and risk profile** - need to understand this dominant participant
+• **Sector/industry breakdown** - current ticker-level view may miss sector concentration
+• **Intraday position limits and margin requirements**
+• **Correlation analysis between concentrated positions**
+
+**Immediate Actions:**
+• Review T001's trading authorization and limits
+• Analyze the large short positions' market risk exposure
+• Establish position concentration limits if not already in place

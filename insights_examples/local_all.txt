@@ -1,0 +1,126 @@
+
+==========================================================================================
+PROVIDER: local | PROMPT: patterns | MODEL: local-heuristic
+==========================================================================================
+
+--- PROMPT (for reference) ---
+Generate concise pattern insights based on the following portfolio summary.
+
+Summary:
+- Total transactions: 1,030
+- Total notional: $21,633,775.10
+- Unique tickers: 10
+- Unique traders: 16
+- Date range: 2024-01-15 19:02:00 to 2024-01-18 01:30:00
+- Top tickers by volume: MSFT=$8,896,850, AAPL=$4,797,094, GOOGL=$3,867,913, NVDA=$1,241,259, GS=$932,483
+- BUY/SELL counts: {'SELL': 523, 'BUY': 507}
+- Most active trader: T001 (tx=344, notional=$0)
+
+
+--- RESPONSE ---
+## Local Insights (Fallback)
+- Note: API keys/SDKs unavailable or provider call failed. Using deterministic heuristics.
+
+## Key Patterns
+- Total transactions: 1,030
+- Total notional volume: $21,633,775.10
+- Buy/Sell mix: BUY 507 vs SELL 523 (BUY ratio 49.2%)
+
+## Concentrations / Imbalances
+- Top 3 tickers by notional: MSFT ($8,896,849.90), AAPL ($4,797,093.65), GOOGL ($3,867,912.65)
+- Concentration proxy: top3 notional share ≈ 81.2%
+- Largest net positions (shares): JPM (300), GS (-110), NVDA (-195)
+
+## Unusual Activity (Heuristic)
+- No strong daily volume spikes detected (rule: top day ≥ 3× median).
+- Most active trader: T001 with 344 transactions.
+
+## Suggested Follow-ups
+- Validate whether large net positions align with risk limits (per-ticker exposure).
+- Review the top trader’s trades for potential concentration or repeated intraday activity.
+- If there are spikes, inspect the underlying tickers and timestamps for that day.
+
+==========================================================================================
+PROVIDER: local | PROMPT: risks | MODEL: local-heuristic
+==========================================================================================
+
+--- PROMPT (for reference) ---
+Identify potential risk flags (concentration, imbalance, anomalies) based on the following summary.
+
+Summary:
+- Total transactions: 1,030
+- Total notional: $21,633,775.10
+- Unique tickers: 10
+- Unique traders: 16
+- Date range: 2024-01-15 19:02:00 to 2024-01-18 01:30:00
+- Top tickers by volume: MSFT=$8,896,850, AAPL=$4,797,094, GOOGL=$3,867,913, NVDA=$1,241,259, GS=$932,483
+- BUY/SELL counts: {'SELL': 523, 'BUY': 507}
+- Most active trader: T001 (tx=344, notional=$0)
+
+
+--- RESPONSE ---
+## Local Insights (Fallback)
+- Note: API keys/SDKs unavailable or provider call failed. Using deterministic heuristics.
+
+## Key Patterns
+- Total transactions: 1,030
+- Total notional volume: $21,633,775.10
+- Buy/Sell mix: BUY 507 vs SELL 523 (BUY ratio 49.2%)
+
+## Concentrations / Imbalances
+- Top 3 tickers by notional: MSFT ($8,896,849.90), AAPL ($4,797,093.65), GOOGL ($3,867,912.65)
+- Concentration proxy: top3 notional share ≈ 81.2%
+- Largest net positions (shares): JPM (300), GS (-110), NVDA (-195)
+
+## Unusual Activity (Heuristic)
+- No strong daily volume spikes detected (rule: top day ≥ 3× median).
+- Most active trader: T001 with 344 transactions.
+
+## Suggested Follow-ups
+- Validate whether large net positions align with risk limits (per-ticker exposure).
+- Review the top trader’s trades for potential concentration or repeated intraday activity.
+- If there are spikes, inspect the underlying tickers and timestamps for that day.
+
+==========================================================================================
+PROVIDER: local | PROMPT: custom | MODEL: local-heuristic
+==========================================================================================
+
+--- PROMPT (for reference) ---
+Answer the user's question using only the summary below. If information is missing, state what is needed.
+
+Question:
+What are the main risks and what should be checked next?
+
+Summary:
+- Total transactions: 1,030
+- Total notional: $21,633,775.10
+- Unique tickers: 10
+- Unique traders: 16
+- Date range: 2024-01-15 19:02:00 to 2024-01-18 01:30:00
+- Top tickers by volume: MSFT=$8,896,850, AAPL=$4,797,094, GOOGL=$3,867,913, NVDA=$1,241,259, GS=$932,483
+- BUY/SELL counts: {'SELL': 523, 'BUY': 507}
+- Most active trader: T001 (tx=344, notional=$0)
+
+
+--- RESPONSE ---
+## Local Insights (Fallback)
+- Note: API keys/SDKs unavailable or provider call failed. Using deterministic heuristics.
+
+## Key Patterns
+- Total transactions: 1,030
+- Total notional volume: $21,633,775.10
+- Buy/Sell mix: BUY 507 vs SELL 523 (BUY ratio 49.2%)
+
+## Concentrations / Imbalances
+- Top 3 tickers by notional: MSFT ($8,896,849.90), AAPL ($4,797,093.65), GOOGL ($3,867,912.65)
+- Concentration proxy: top3 notional share ≈ 81.2%
+- Largest net positions (shares): JPM (300), GS (-110), NVDA (-195)
+
+## Unusual Activity (Heuristic)
+- No strong daily volume spikes detected (rule: top day ≥ 3× median).
+- Most active trader: T001 with 344 transactions.
+
+## Suggested Follow-ups
+- Validate whether large net positions align with risk limits (per-ticker exposure).
+- Review the top trader’s trades for potential concentration or repeated intraday activity.
+- If there are spikes, inspect the underlying tickers and timestamps for that day.

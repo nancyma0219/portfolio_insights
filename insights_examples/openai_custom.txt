@@ -1,0 +1,53 @@
+
+==========================================================================================
+PROVIDER: openai | PROMPT: custom | MODEL: gpt-4o
+==========================================================================================
+
+--- PROMPT (for reference) ---
+Answer the user's question using only the summary below. If information is missing, state what is needed.
+
+Question:
+What are the biggest concentration risks in this portfolio, and what should be reviewed next?
+
+Summary:
+- Total transactions: 1,030
+- Total notional: $21,633,775.10
+- Unique tickers: 10
+- Unique traders: 16
+- Date range: 2024-01-15 19:02:00 to 2024-01-18 01:30:00
+- Top tickers by volume: MSFT=$8,896,850, AAPL=$4,797,094, GOOGL=$3,867,913, NVDA=$1,241,259, GS=$932,483
+- BUY/SELL counts: {'SELL': 523, 'BUY': 507}
+- Most active trader: T001 (tx=344, notional=$0)
+
+
+--- RESPONSE ---
+Based on the analytics summary provided, here are the biggest concentration risks and recommendations for what should be reviewed next:
+
+### Concentration Risks:
+- **Ticker Concentration:**
+  - **MSFT** has the highest volume at $8,896,849.90, which is a significant portion of the total notional volume. This indicates a high concentration risk in this ticker.
+  - **AAPL** and **GOOGL** also have substantial volumes, $4,797,093.65 and $3,867,912.65 respectively, suggesting potential concentration risks.
+
+- **Net Position Risks:**
+  - **AAPL** has the largest negative net position with -1,520 shares, indicating a significant short exposure.
+  - **META** and **MSFT** also have large negative net positions, with -1,070 and -705 shares respectively, which could pose risks if market conditions change unfavorably.
+
+### Recommendations for Review:
+- **Diversification Strategy:**
+  - Review the diversification strategy to ensure that the portfolio is not overly reliant on a few tickers, particularly MSFT, AAPL, and GOOGL.
+
+- **Risk Management:**
+  - Evaluate the risk management practices concerning the large short positions, especially in AAPL, META, and MSFT, to mitigate potential losses.
+
+- **Trader Activity:**
+  - Analyze the trading patterns of the most active trader, T001, who accounts for a significant portion of the total notional volume, to understand their impact on the portfolio's risk profile.
+
+### Missing Information:
+- **Sector Exposure:**
+  - The summary does not provide information on sector exposure, which is crucial for assessing concentration risks across different industries.
+
+- **Market Conditions:**
+  - There is no information on current market conditions or trends, which could influence the risk assessment of the portfolio.
+
+- **Portfolio Objectives:**
+  - Understanding the portfolio's investment objectives and risk tolerance would provide better context for evaluating concentration risks.
